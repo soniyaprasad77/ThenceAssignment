@@ -14,6 +14,7 @@ const RegistrationPage = () => {
     emailError: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [hasShadow, setHasShadow] = useState(false);
   const isDisabled = formData.name.trim() === '' || formData.email.trim() === "";
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,6 +29,7 @@ const RegistrationPage = () => {
       // Set an error state based on validation result
       [`${name}Error`]: isValid ? "" : "Enter a valid email address",
     });
+    setHasShadow(true);
   };
 
   const handleSubmit = (e) => {
@@ -56,8 +58,8 @@ const RegistrationPage = () => {
               onSubmit={handleSubmit}
             >
               <div className="mb-4 text-center">
-                <Caption caption="Registration" />
-                <Title title=" Start your success Journey here!" />
+                <Caption caption="Registration" hasShadow={hasShadow} />
+                <Title title=" Start your success Journey here!" hasShadow={hasShadow} />
 
               </div>
               <div className="mb-8">
