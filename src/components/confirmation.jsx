@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import logo from '../assets/logo.svg';
 import success from '../assets/success.svg';
 import { Link } from 'react-router-dom';
+import Caption from './caption';
+import Title from './title';
 
 const Confirmation = () => {
     const [redirectCountdown, setRedirectCountdown] = useState(5); // Initialize countdown state
@@ -23,7 +25,7 @@ const Confirmation = () => {
     }
     return (
         <div>
-            <div className=" w-full bg-white z-50 flex justify-between items-center px-10 py-4">
+            <div className="fixed top-0 w-full bg-white z-50 flex justify-between items-center px-10 py-4">
                 <div className="flex items-center">
                     <img src={logo} alt="Logo" className="mr-4" />
                 </div>
@@ -32,19 +34,15 @@ const Confirmation = () => {
                 <div style={{ width: "588px", height: "572px" }}>
                     <div className="p-8 flex flex-col items-center">
                         <img src={success} alt="success img" className="w-10 h-10 justify-center mb-6" />
-                        <h3 className="font-coveredByYourGrace text-3xl text-green-400">
-                            Success submitted
-                        </h3>
-                        <h1 className="text-4xl font-bold">
-                            Congratulations
-                        </h1>
+                        <Caption caption=" Success submitted" />
+                        <Title title="Congratulations" />
                         <p className="text-center text-[#727272] mt-4">
                             Your request has been successfully submitted to us. We will validate your information and reach out to you shortly with updates.
                         </p>
                     </div>
                 </div>
-            </div>
-            <div className=" w-full bg-white z-50 flex justify-center items-center px-10 py-4">
+            </div>e
+            <div className="fixed bottom-0 w-full bg-white z-50 flex justify-center items-center px-10 pb-4">
                 <div className="flex items-center">
                     <p className="text-center text-[#727272] py-4">
                         Redirecting you to the homepage in&nbsp;

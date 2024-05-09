@@ -41,7 +41,7 @@ const RegistrationPage = () => {
   return (
     <>
       {!submitted ? (
-        <><div className="w-full bg-white z-50 flex justify-between items-center px-10 py-2">
+        <><div className=" w-full bg-white z-50 flex justify-between items-center px-10 py-2">
           <div className="flex items-center">
             <img src={logo} alt="Logo" className="mr-4" />
           </div>
