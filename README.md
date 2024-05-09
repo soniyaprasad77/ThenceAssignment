@@ -14,3 +14,31 @@ This is a React-based project that uses Vite for a faster and leaner development
 
 ## Additional Features 
 - Added a hover effect on some items of the carousel with a smooth transitioning effect.
+
+
+## Setting Up the Project Locally
+
+### Prerequisite 
+1. Node js
+
+### Run Locally
+
+1. Go the directory of the extracted zip folder
+    ```
+    cd ThenceAssignment
+    ```
+
+2. Download the dependencies
+    ```
+    npm install
+    ```
+
+3. Run the Development Server
+   ```
+   npm run dev
+   ```
+4. Go to: 
+    ```
+     http://localhost:5173/
+    ```
+
